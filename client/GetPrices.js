@@ -11,7 +11,7 @@ const { erc20ABI, factoryABI, routerABI, pairABI } = require('./ABIList');
 
 // Connect To A Standard Provider
 const provider = new ethers.providers.JsonRpcProvider(
-  'https://bsc-dataseed.binance.org/'
+  'https://eth-mainnet.g.alchemy.com/v2/oR2RI3ISaPeRDfEm4IB-f5ios943aPoy'
 );
 
 // Connect to Factory
@@ -46,7 +46,9 @@ const getPrices = async (amountInHuman) => {
     amountsOut[1].toString(),
     decimals
   );
+
+  console.log(aountOutHuman);
 };
 
-const amountInHuman = '500';
+const amountInHuman = '1';
 getPrices(amountInHuman);
